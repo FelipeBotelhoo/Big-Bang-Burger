@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bang Burger - Contato</title>
+    <link rel="shortcut icon" href="./img/logo.webp" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="fixed top-0 w-full z-10">
+        <!-- Inicio Navbar -->
+        <nav class="bg-black p-4 flex justify-between items-center ">
+            <article class="text-2xl text-[#d4a373] font-cursive"><a href="./index.html">Big Bang Burger</a></article>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="./home.html" class="text-[#d4a373] text-lg hover:text-white transition">Home</a></li>
+                <li><a href="./cardapio.html" class="text-[#d4a373] text-lg hover:text-white transition">Cardápio</a></li>
+                <li><a href="./home.html#sobre" class="text-[#d4a373] text-lg hover:text-white transition">Sobre</a>
+                </li>
+                <li><a href="./contato.html" class="text-[#d4a373] text-lg hover:text-white transition">Contato</a></li>
+                <li><a href="./localizacao.html" class="text-[#d4a373] text-lg hover:text-white transition">Localização</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col items-center cursor-pointer" onclick="toggleMenu()">
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+            </div>
+        </nav>
+
+        <!-- Menu responsivo -->
+        <ul class="md:hidden fixed top-16 right-0 bg-black w-full text-center py-4 space-y-4 text-[#d4a373] text-lg transition transform scale-0 ease-in-out"
+            id="menu">
+            <li><a href="./home.html" class="hover:text-white">Home</a></li>
+            <li><a href="./cardapio.html" class="hover:text-white">Cardápio</a></li>
+            <li><a href="./home.html#sobre" class="hover:text-white">Sobre</a></li>
+            <li><a href="./contato.html" class="hover:text-white">Contato</a></li>
+            <li><a href="./localizacao.html" class="hover:text-white">Localização</a></li>
+        </ul>
+
+        <!-- Fim navbar -->
+    </header>
+
+
+    <main>
+        <!-- form contato -->
+
+        <section class="py-16 bg-gray-100 mt-8">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Entre Em Contato</h2>
+                <p class="text-lg text-center text-gray-700 mb-12">Sua opinião é muito importante para nós. Por favor,
+                    compartilhe sua experiência.</p>
+
+                <form action="#" method="POST" class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Nome</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                placeholder="Seu nome">
+                        </div>
+
+
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">E-mail</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                placeholder="Seu e-mail">
+                        </div>
+                    </div>
+
+
+        
+
+                    <div class="mt-6">
+                        <label for="feedback" class="block text-gray-700 text-sm font-semibold mb-2">Mensagem</label>
+                        <textarea id="feedback" name="feedback" rows="4" required
+                            class="w-full p-3 border border-gray-300 resize-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder="Compartilhe sua experiência " ></textarea>
+                    </div>
+
+                    <div class="mt-6 text-center">
+                        <button type="submit"
+                            class="px-6 py-3 bg-[#d4a373] text-white text-lg font-semibold rounded-lg hover:bg-[#000000] focus:outline-none focus:ring-2 focus:ring-indigo-500">Enviar
+                            </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-white py-8">
+        <div class="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+            <!-- Seção de informações -->
+            <div class="text-center sm:text-left mb-6 sm:mb-0">
+                <h2 class="text-3xl font-bold text-[#d4a373] mb-2">Big Bang Burger</h2>
+                <p class="text-lg">Sabor e qualidade em cada mordida! </p>
+            </div>
+
+            <!-- Seção de Baixar App  -->
+            <div class="flex items-center justify-center sm:justify-start space-x-4 mt-5 sm:mt-0 w-full sm:w-auto">
+                <p class="text-gray-400">Baixe nosso App:</p>
+                <a href="https://play.google.com/store/apps/details?id=com.example" target="_blank"
+                    class="flex items-center space-x-2 text-[#d4a373] hover:text-white transition">
+                    <i class="fab fa-android text-3xl"></i>
+                    <span class="text-xl">Google Play</span>
+                </a>
+            </div>
+
+            <!-- Seção de redes sociais -->
+            <div class="flex space-x-6 mt-6 sm:mt-0">
+                <a href="https://www.facebook.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-sm text-gray-400 mt-6">
+            <p>&copy; 2025 Big Bang Burger. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/global.js"></script>
+</body>
+
+</html>

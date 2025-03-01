@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bang Burger - Home</title>
+    <link rel="shortcut icon" href="./img/logo.webp" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="fixed top-0 w-full z-10">
+        <!-- Inicio Navbar -->
+        <nav class="bg-black p-4 flex justify-between items-center">
+            <article class="text-2xl text-[#d4a373] font-cursive"><a href="./index.html">Big Bang Burger</a></article>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="./home.html" class="text-[#d4a373] text-lg hover:text-white transition">Home</a></li>
+                <li><a href="./cardapio.html" class="text-[#d4a373] text-lg hover:text-white transition">Cardápio</a>
+                </li>
+                <li><a href="./home.html#sobre" class="text-[#d4a373] text-lg hover:text-white transition">Sobre</a>
+                </li>
+                <li><a href="./contato.html" class="text-[#d4a373] text-lg hover:text-white transition">Contato</a></li>
+                <li><a href="./localizacao.html" class="text-[#d4a373] text-lg hover:text-white transition">Localização</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col items-center cursor-pointer" onclick="toggleMenu()">
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                
+            </div>
+        </nav>
+
+        <!-- Menu responsivo -->
+        <ul class="md:hidden fixed top-16 right-0 bg-black w-full text-center py-4 space-y-4 text-[#d4a373] text-lg transition transform scale-0 ease-in-out"
+            id="menu">
+            <li><a href="./home.html" class="hover:text-white">Home</a></li>
+            <li><a href="./cardapio.html" class="hover:text-white">Cardápio</a></li>
+            <li><a href="./home.html#sobre" class="hover:text-white">Sobre</a></li>
+            <li><a href="./contato.html" class="hover:text-white">Contato</a></li>
+            <li><a href="./localizacao.html" class="hover:text-white">Localização</a></li>
+        </ul>
+
+        <!-- Fim navbar -->
+    </header>
+
+
+
+    <main>
+
+        <!-- banner -->
+        <div class="bg-cover bg-center h-screen" style="background-image: url('./img/banner1.webp');">
+            <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+                <div class="text-center text-white p-8 max-w-lg">
+                    <h2 class="text-4xl font-bold mb-4">O Melhor Hambúrguer da Cidade!</h2>
+                    <p class="text-lg mb-6">Experimente o nosso hambúrguer suculento com ingredientes frescos e
+                        saborosos.</p>
+                    <a href="./cardapio.html"
+                        class="bg-yellow-500 text-black px-6 py-3 rounded-full text-xl hover:bg-yellow-400 transition">Peça
+                        Agora</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- sobre -->
+        <section id="sobre" class="py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre Nós</h2>
+                <p class="text-lg text-gray-700 mb-8">Somos uma empresa dedicada a proporcionar os melhores hambúrgueres, feitos com ingredientes frescos e de alta qualidade. Nossa missão é entregar sabor, qualidade e um atendimento excelente a cada cliente.</p>
+        
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500"> 
+                        <div class="text-4xl text-[#d4a373] mb-4">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Missão</h3>
+                        <p class="text-gray-600">Proporcionar uma experiência gastronômica única com hambúrgueres artesanais feitos com amor e ingredientes frescos.</p>
+                    </div>
+        
+                    <div class="bg-white p-6 rounded-lg shadow-lg"  data-aos="fade-up" data-aos-delay="500">
+                        <div class="text-4xl text-[#d4a373] mb-4">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Visão</h3>
+                        <p class="text-gray-600">Ser reconhecido como o melhor local para saborear hambúrgueres na cidade, sempre inovando e atendendo com excelência.</p>
+                    </div>
+        
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <div class="text-4xl text-[#d4a373] mb-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Valores</h3>
+                        <p class="text-gray-600">Tradição, qualidade, honestidade e compromisso com nossos clientes são os pilares da nossa empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- carroseu de produtos -->
+        <section class="py-16 ">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Nossos Produtos</h2>
+
+                <div class="overflow-hidden">
+                    <div class="flex items-center space-x-4 product-carousel w-full">
+                        <div class="carousel w-full">
+                            <div class="group">
+                                <div class="card"><img src="./img/prod1.jpeg" alt="Product 1"></div>
+                                <div class="card"><img src="./img/prod2.jpeg" alt="Product 2"></div>
+                                <div class="card"><img src="./img/prod3.webp" alt="Product 3"></div>
+                                <div class="card"><img src="./img/prod4.jpeg" alt="Product 4"></div>
+                                <div class="card"><img src="./img/prod5.jpeg" alt="Product 5"></div>
+                            </div>
+                            <!-- Duplicando as imagens para o efeito infinito -->
+                            <div aria-hidden class="group">
+                                <div class="card"><img src="./img/prod1.jpeg" alt="Product 1"></div>
+                                <div class="card"><img src="./img/prod2.jpeg" alt="Product 2"></div>
+                                <div class="card"><img src="./img/prod3.webp" alt="Product 3"></div>
+                                <div class="card"><img src="./img/prod4.jpeg" alt="Product 4"></div>
+                                <div class="card"><img src="./img/prod5.jpeg" alt="Product 5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <!-- feedback  -->
+
+
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">O que nossos clientes dizem</h2>
+                <p class="text-lg text-center text-gray-700 mb-12">Confira os feedbacks dos nossos clientes e como estamos sempre melhorando.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img src="./img/pessoa1.webp" alt="Cliente 1" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <p class="text-lg font-semibold text-center text-gray-900">João Silva</p>
+                        <div class="text-center text-gray-600 mt-2">
+                            <p>"O serviço foi excelente! Super recomendo, tudo muito rápido e eficiente."</p>
+                        </div>
+                    </div>
+        
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img src="./img/pessoa2.webp" alt="Cliente 2" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <p class="text-lg font-semibold text-center text-gray-900">Maria Oliveira</p>
+                        <div class="text-center text-gray-600 mt-2">
+                            <p>"Adorei a experiência! Atendimento ótimo e produtos de excelente qualidade."</p>
+                        </div>
+                    </div>
+        
+                    <!-- Card 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img src="./img/pessoa3.jpeg" alt="Cliente 3" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <p class="text-lg font-semibold text-center text-gray-900">Clara Souza</p>
+                        <div class="text-center text-gray-600 mt-2">
+                            <p>"Fiquei muito satisfeito com o atendimento. Voltarei sempre que precisar!"</p>
+                        </div>
+                    </div>
+        
+                    <!-- Card 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img src="./img/pessoa4.webp" alt="Cliente 4" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <p class="text-lg font-semibold text-center text-gray-900">Victor Costa</p>
+                        <div class="text-center text-gray-600 mt-2">
+                            <p>"Experiência incrível, super atenciosos e profissionais. Recomendo muito!"</p>
+                        </div>
+                    </div>
+        
+                    <!-- Card 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img src="./img/pessoa5.jpeg" alt="Cliente 5" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <p class="text-lg font-semibold text-center text-gray-900">Lucas Pereira</p>
+                        <div class="text-center text-gray-600 mt-2">
+                            <p>"Simplesmente fantástico! O melhor atendimento que já tive em anos."</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img src="./img/pessoa6.webp" alt="Cliente 5" class="w-20 h-20 rounded-full mx-auto mb-4">
+                        <p class="text-lg font-semibold text-center text-gray-900">Luciana Pereira</p>
+                        <div class="text-center text-gray-600 mt-2">
+                            <p>"Simplesmente fantástico! O melhor atendimento que já tive em anos."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        
+    </main>
+
+    <footer class="text-white py-8">
+        <div class="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+            <!-- Seção de informações -->
+            <div class="text-center sm:text-left mb-6 sm:mb-0">
+                <h2 class="text-3xl font-bold text-[#d4a373] mb-2">Big Bang Burger</h2>
+                <p class="text-lg">Sabor e qualidade em cada mordida! </p>
+            </div>
+
+            <!-- Seção de Baixar App  -->
+            <div class="flex items-center justify-center sm:justify-start space-x-4 mt-5 sm:mt-0 w-full sm:w-auto">
+                <p class="text-gray-400">Baixe nosso App:</p>
+                <a href="https://play.google.com/store/apps/details?id=com.example" target="_blank"
+                    class="flex items-center space-x-2 text-[#d4a373] hover:text-white transition">
+                    <i class="fab fa-android text-3xl"></i>
+                    <span class="text-xl">Google Play</span>
+                </a>
+            </div>
+
+            <!-- Seção de redes sociais -->
+            <div class="flex space-x-6 mt-6 sm:mt-0">
+                <a href="https://www.facebook.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-sm text-gray-400 mt-6">
+            <p>&copy; 2025 Big Bang Burger. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/global.js"></script>
+</body>
+
+</html>

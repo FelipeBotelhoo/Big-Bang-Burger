@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300;400;700&display=swap');
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    padding-top: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* navbar */
+header {
+    z-index: 20; 
+    position: fixed; 
+}
+
+#menu {
+    z-index: 30; 
+    position: fixed; 
+}
+
+
+
+.navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+}
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    color: #d4a373;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #d4a373;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #fff;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: #d4a373;
+    margin: 5px;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+
+
+
+footer{
+    background-color: #000;
+}
+

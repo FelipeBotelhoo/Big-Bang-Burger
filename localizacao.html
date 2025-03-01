@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bang Burger- Localização</title>
+    <link rel="shortcut icon" href="./img/logo.webp" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="fixed top-0 w-full z-10">
+        <!-- Inicio Navbar -->
+        <nav class="bg-black p-4 flex justify-between items-center ">
+            <article class="text-2xl text-[#d4a373] font-cursive"><a href="./index.html">Big Bang Burger</a></article>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="./home.html" class="text-[#d4a373] text-lg hover:text-white transition">Home</a></li>
+                <li><a href="./cardapio.html" class="text-[#d4a373] text-lg hover:text-white transition">Cardápio</a></li>
+                <li><a href="./home.html#sobre" class="text-[#d4a373] text-lg hover:text-white transition">Sobre</a></li>
+                <li><a href="./contato.html" class="text-[#d4a373] text-lg hover:text-white transition">Contato</a></li>
+                <li><a href="./localizacao.html" class="text-[#d4a373] text-lg hover:text-white transition">Localização</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col items-center cursor-pointer" onclick="toggleMenu()">
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+            </div>
+        </nav>
+
+        <!-- Menu responsivo -->
+        <ul class="md:hidden fixed top-16 right-0 bg-black w-full text-center py-4 space-y-4 text-[#d4a373] text-lg transition transform scale-0 ease-in-out"
+            id="menu">
+            <li><a href="./home.html" class="hover:text-white">Home</a></li>
+            <li><a href="./cardapio.html" class="hover:text-white">Cardápio</a></li>
+            <li><a href="./home.html#sobre" class="hover:text-white">Sobre</a></li>
+            <li><a href="./contato.html" class="hover:text-white">Contato</a></li>
+            <li><a href="./localizacao.html" class="hover:text-white">Localização</a></li>
+        </ul>
+
+        <!-- Fim navbar -->
+    </header>
+
+
+    <main>
+        <section class="py-16 px-6 text-center bg-[#d4a373] text-white mt-8">
+            <figure class="flex justify-center">
+                <img src="./img/logo.webp" alt="Big Bang Burger" class="w-48 h-48 rounded-full object-cover shadow-xl">
+            </figure>
+            <h1 class="text-4xl font-bold">Big Bang Burger</h1>
+            <p class="mt-4 text-lg max-w-2xl mx-auto">
+                A Big Bang Burger é sinônimo de explosão de sabor! Com franquias espalhadas pelo Brasil, garantimos a melhor experiência gastronômica para nossos clientes.
+            </p>
+        </section>
+        
+        <section class="py-12 px-6 text-center">
+            <h2 class="text-3xl font-semibold">Nossa Localização</h2>
+            <p class="mt-2 text-lg">Venha nos visitar e experimentar o melhor hambúrguer da galáxia!</p>
+            
+            <div class="mt-6 flex justify-center">
+                <iframe class="w-full max-w-2xl h-96 rounded-lg shadow-lg" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093674!2d144.95373631531636!3d-37.81627974202182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4524a5f5d1%3A0x1d87d0743db136f4!2sBig%20Bang%20Burguer!5e0!3m2!1sen!2sbr!4v1633156583176!5m2!1sen!2sbr" 
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        
+        <section class="py-12 px-6 bg-white">
+            <h2 class="text-3xl font-semibold text-center">Nossas Franquias</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 bg-gray-200 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">São Paulo - SP</h3>
+                    <p class="mt-2">Av. Paulista, 1234 - Centro</p>
+                </div>
+                <div class="p-6 bg-gray-200 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Rio de Janeiro - RJ</h3>
+                    <p class="mt-2">Rua Copacabana, 567 - Zona Sul</p>
+                </div>
+                <div class="p-6 bg-gray-200 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Belo Horizonte - MG</h3>
+                    <p class="mt-2">Av. Afonso Pena, 789 - Centro</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+
+    <footer class="text-white py-8">
+        <div class="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+            <!-- Seção de informações -->
+            <div class="text-center sm:text-left mb-6 sm:mb-0">
+                <h2 class="text-3xl font-bold text-[#d4a373] mb-2">Big Bang Burger</h2>
+                <p class="text-lg">Sabor e qualidade em cada mordida! </p>
+            </div>
+
+            <!-- Seção de Baixar App  -->
+            <div class="flex items-center justify-center sm:justify-start space-x-4 mt-5 sm:mt-0 w-full sm:w-auto">
+                <p class="text-gray-400">Baixe nosso App:</p>
+                <a href="https://play.google.com/store/apps/details?id=com.example" target="_blank"
+                    class="flex items-center space-x-2 text-[#d4a373] hover:text-white transition">
+                    <i class="fab fa-android text-3xl"></i>
+                    <span class="text-xl">Google Play</span>
+                </a>
+            </div>
+
+            <!-- Seção de redes sociais -->
+            <div class="flex space-x-6 mt-6 sm:mt-0">
+                <a href="https://www.facebook.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank"
+                    class="text-gray-400 hover:text-[#d4a373] transition">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-sm text-gray-400 mt-6">
+            <p>&copy; 2025 Big Bang Burger. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bang Burger</title>
+    <link rel="shortcut icon" href="./img/logo.webp" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header class="fixed top-0 w-full z-10">
+        <!-- Inicio Navbar -->
+        <nav class="bg-black p-4 flex justify-between items-center ">
+            <article class="text-2xl text-[#d4a373] font-cursive"><a href="./index.html">Big Bang Burger</a></article>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="./home.html" class="text-[#d4a373] text-lg hover:text-white transition">Home</a></li>
+                <li><a href="./cardapio.html" class="text-[#d4a373] text-lg hover:text-white transition">Cardápio</a></li>
+                <li><a href="./home.html#sobre" class="text-[#d4a373] text-lg hover:text-white transition">Sobre</a></li>
+                <li><a href="./contato.html" class="text-[#d4a373] text-lg hover:text-white transition">Contato</a></li>
+                <li><a href="./localizacao.html" class="text-[#d4a373] text-lg hover:text-white transition">Localização</a></li>
+            </ul>
+            <div class="md:hidden flex flex-col items-center cursor-pointer" onclick="toggleMenu()">
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+                <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
+            </div>
+        </nav>
+
+        <!-- Menu responsivo -->
+        <ul class="md:hidden fixed top-16 right-0 bg-black w-full text-center py-4 space-y-4 text-[#d4a373] text-lg transition transform scale-0 ease-in-out"
+            id="menu">
+            <li><a href="./home.html" class="hover:text-white">Home</a></li>
+            <li><a href="./cardapio.html" class="hover:text-white">Cardápio</a></li>
+            <li><a href="./home.html#sobre" class="hover:text-white">Sobre</a></li>
+            <li><a href="./contato.html" class="hover:text-white">Contato</a></li>
+            <li><a href="./localizacao.html" class="hover:text-white">Localização</a></li>
+        </ul>
+
+        <!-- Fim navbar -->
+    </header>
+
+
+    <main>
+        <section class="relative h-screen bg-cover bg-center">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+
+            <!-- Conteúdo centralizado -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                <h1 class=" mb-4 animate__animated animate__fadeIn animate__delay-1s">Bem-vindo ao
+                    Big Bang Burger!</h1>
+                <p class=" mb-8 animate__animated animate__fadeIn animate__delay-2s">A melhor experiência gastronômica
+                    te espera, venha conhecer a nossa loja e se apaixonar!</p>
+
+                <!-- Botão para a loja -->
+                <!--  <a href="loja.html" class="bg-[#d4a373] text-lg py-3 px-8 rounded-full shadow-lg hover:bg-[#b39262] transition-all duration-300 transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s">
+            Conheça Nossa Loja
+        </a>
+ -->
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                                result="goo">
+                            </feColorMatrix>
+                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                        </filter>
+                    </defs>
+                </svg>
+
+                <div class="buttons">
+                    <a class="blob-btn" href="./cardapio.html">
+                        Conheça nossa loja
+                        <span class="blob-btn__inner">
+                            <span class="blob-btn__blobs">
+                                <span class="blob-btn__blob"></span>
+                                <span class="blob-btn__blob"></span>
+                                <span class="blob-btn__blob"></span>
+                                <span class="blob-btn__blob"></span>
+                            </span>
+                        </span>
+                    </a>
+                    <br />
+                </div>
+
+
+        </section>
+    </main>
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/global.js"></script>
+</body>
+
+</html>
