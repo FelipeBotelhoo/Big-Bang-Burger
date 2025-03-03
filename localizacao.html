@@ -8,20 +8,25 @@
     <link rel="shortcut icon" href="./img/logo.webp" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/chat.css">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body > 
     <header class="fixed top-0 w-full z-10">
         <!-- Inicio Navbar -->
         <nav class="bg-black p-4 flex justify-between items-center ">
             <article class="text-2xl text-[#d4a373] font-cursive"><a href="./index.html">Big Bang Burger</a></article>
             <ul class="hidden md:flex space-x-6">
                 <li><a href="./home.html" class="text-[#d4a373] text-lg hover:text-white transition">Home</a></li>
-                <li><a href="./cardapio.html" class="text-[#d4a373] text-lg hover:text-white transition">Cardápio</a></li>
-                <li><a href="./home.html#sobre" class="text-[#d4a373] text-lg hover:text-white transition">Sobre</a></li>
+                <li><a href="./cardapio.html" class="text-[#d4a373] text-lg hover:text-white transition">Cardápio</a>
+                </li>
+                <li><a href="./home.html#sobre" class="text-[#d4a373] text-lg hover:text-white transition">Sobre</a>
+                </li>
                 <li><a href="./contato.html" class="text-[#d4a373] text-lg hover:text-white transition">Contato</a></li>
-                <li><a href="./localizacao.html" class="text-[#d4a373] text-lg hover:text-white transition">Localização</a></li>
+                <li><a href="./localizacao.html"
+                        class="text-[#d4a373] text-lg hover:text-white transition">Localização</a></li>
             </ul>
             <div class="md:hidden flex flex-col items-center cursor-pointer" onclick="toggleMenu()">
                 <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
@@ -44,30 +49,40 @@
     </header>
 
 
-    <main>
-        <section class="py-16 px-6 text-center bg-[#d4a373] text-white mt-8">
-            <figure class="flex justify-center">
-                <img src="./img/logo.webp" alt="Big Bang Burger" class="w-48 h-48 rounded-full object-cover shadow-xl">
-            </figure>
-            <h1 class="text-4xl font-bold">Big Bang Burger</h1>
-            <p class="mt-4 text-lg max-w-2xl mx-auto">
-                A Big Bang Burger é sinônimo de explosão de sabor! Com franquias espalhadas pelo Brasil, garantimos a melhor experiência gastronômica para nossos clientes.
-            </p>
-        </section>
+    <main >
+        <section class="bg-contain bg-center h-[35vh] sm:h-[70vh] md:h-[90vh]" style="background-image: url('./img/fundoletreirocopy.png'); background-attachment: fixed;">
+            <article class="flex items-center justify-center h-full bg-black bg-opacity-50">
+             
+            </article>
+          </section>
+          
+          
+          
         
+
         <section class="py-12 px-6 text-center">
             <h2 class="text-3xl font-semibold">Nossa Localização</h2>
+
             <p class="mt-2 text-lg">Venha nos visitar e experimentar o melhor hambúrguer da galáxia!</p>
-            
+
             <div class="mt-6 flex justify-center">
-                <iframe class="w-full max-w-2xl h-96 rounded-lg shadow-lg" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093674!2d144.95373631531636!3d-37.81627974202182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4524a5f5d1%3A0x1d87d0743db136f4!2sBig%20Bang%20Burguer!5e0!3m2!1sen!2sbr!4v1633156583176!5m2!1sen!2sbr" 
+                <iframe class="w-full max-w-2xl h-96 rounded-lg shadow-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093674!2d144.95373631531636!3d-37.81627974202182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4524a5f5d1%3A0x1d87d0743db136f4!2sBig%20Bang%20Burguer!5e0!3m2!1sen!2sbr!4v1633156583176!5m2!1sen!2sbr"
                     allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
-        
+
         <section class="py-12 px-6 bg-white">
             <h2 class="text-3xl font-semibold text-center">Nossas Franquias</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0">
+              
+                <div class="text-center md:text-left md:ml-8 text-[#000000]">
+                    <p class="mt-4 text-lg max-w-2xl mx-auto md:mx-0 text-center">
+                        A Big Bang Burger é sinônimo de explosão de sabor! Com franquias espalhadas pelo Brasil, garantimos a
+                        melhor experiência gastronômica para nossos clientes.
+                    </p>
+                </div>
+            </div>
             <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="p-6 bg-gray-200 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold">São Paulo - SP</h3>
@@ -83,19 +98,45 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 
+    <!-- button chatt -->
+    <button onclick="toggleChat()" class="fixed bottom-4 right-4 bg-[#d4a373] text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg hover:bg-[#000000] transition">
+        <i class="fas fa-comment-dots text-2xl"></i>
+    </button>
+
+    <!-- chatt box -->
+    <div id="chat-box" class="hidden opacity-0 fixed bottom-20 right-4 w-80 bg-white shadow-lg rounded-lg border border-gray-300 transition-opacity duration-300 flex flex-col">
+        <div class="bg-[#000000] text-white p-3 flex justify-between items-center rounded-t-lg">
+            <h2 class="text-lg font-semibold">Big Bang Burger 🍔</h2>
+            <button onclick="toggleChat()" class="text-white text-xl">&times;</button>
+        </div>
+
+        <div id="chat-body" class="p-3 h-48 overflow-y-auto text-gray-700 flex flex-col"></div>
+
+        <div id="name-form" class="p-3 border-t border-gray-300">
+            <input id="name-input" type="text" placeholder="Digite seu nome" class="w-full p-2 border rounded-lg">
+            <button onclick="setUserName()" class="bg-[#000000] text-white px-3 py-2 rounded-lg text-sm mt-2 ">Confirmar</button>
+        </div>
+
+        <div id="options" class="p-3 border-t border-gray-300 flex flex-wrap gap-2 hidden">
+            <button onclick="sendMessage('cardapio')" class="bg-[#d4a373] text-white px-3 py-2 rounded-lg text-sm">📖 Cardápio</button>
+            <button onclick="sendMessage('localizacao')" class="bg-[#d4a373] text-white px-3 py-2 rounded-lg text-sm">📍 Localização</button>
+            <button onclick="sendMessage('pagamento')" class="bg-[#d4a373] text-white px-3 py-2 rounded-lg text-sm">💳 Pagamento</button>
+            <button onclick="sendMessage('pedido')" class="bg-[#d4a373] text-white px-3 py-2 rounded-lg text-sm">🚚 Status do Pedido</button>
+        </div>
+    </div>
 
     <footer class="text-white py-8">
         <div class="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
-            <!-- Seção de informações -->
+            
             <div class="text-center sm:text-left mb-6 sm:mb-0">
                 <h2 class="text-3xl font-bold text-[#d4a373] mb-2">Big Bang Burger</h2>
                 <p class="text-lg">Sabor e qualidade em cada mordida! </p>
             </div>
 
-            <!-- Seção de Baixar App  -->
+            
             <div class="flex items-center justify-center sm:justify-start space-x-4 mt-5 sm:mt-0 w-full sm:w-auto">
                 <p class="text-gray-400">Baixe nosso App:</p>
                 <a href="https://play.google.com/store/apps/details?id=com.example" target="_blank"
@@ -105,7 +146,7 @@
                 </a>
             </div>
 
-            <!-- Seção de redes sociais -->
+           
             <div class="flex space-x-6 mt-6 sm:mt-0">
                 <a href="https://www.facebook.com" target="_blank"
                     class="text-gray-400 hover:text-[#d4a373] transition">
@@ -134,6 +175,18 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/global.js"></script>
+    <script src="./js/chatboot.js"></script>
 </body>
 
 </html>
+
+   <!-- <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0">
+              
+                <div class="text-center md:text-left md:ml-8 text-[#000000]">
+                    <h1 class="text-4xl font-bold">Big Bang Burger</h1>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto md:mx-0">
+                        A Big Bang Burger é sinônimo de explosão de sabor! Com franquias espalhadas pelo Brasil, garantimos a
+                        melhor experiência gastronômica para nossos clientes.
+                    </p>
+                </div>
+            </div> -->

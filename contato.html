@@ -10,23 +10,25 @@
 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/home.css">
-
+    <link rel="stylesheet" href="./css/chat.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen bg-gray-100">
     <header class="fixed top-0 w-full z-10">
         <!-- Inicio Navbar -->
         <nav class="bg-black p-4 flex justify-between items-center ">
             <article class="text-2xl text-[#d4a373] font-cursive"><a href="./index.html">Big Bang Burger</a></article>
             <ul class="hidden md:flex space-x-6">
                 <li><a href="./home.html" class="text-[#d4a373] text-lg hover:text-white transition">Home</a></li>
-                <li><a href="./cardapio.html" class="text-[#d4a373] text-lg hover:text-white transition">Cardápio</a></li>
+                <li><a href="./cardapio.html" class="text-[#d4a373] text-lg hover:text-white transition">Cardápio</a>
+                </li>
                 <li><a href="./home.html#sobre" class="text-[#d4a373] text-lg hover:text-white transition">Sobre</a>
                 </li>
                 <li><a href="./contato.html" class="text-[#d4a373] text-lg hover:text-white transition">Contato</a></li>
-                <li><a href="./localizacao.html" class="text-[#d4a373] text-lg hover:text-white transition">Localização</a></li>
+                <li><a href="./localizacao.html"
+                        class="text-[#d4a373] text-lg hover:text-white transition">Localização</a></li>
             </ul>
             <div class="md:hidden flex flex-col items-center cursor-pointer" onclick="toggleMenu()">
                 <div class="w-8 h-1 bg-[#d4a373] mb-1"></div>
@@ -49,7 +51,7 @@
     </header>
 
 
-    <main>
+    <main class="flex-grow">
         <!-- form contato -->
 
         <section class="py-16 bg-gray-100 mt-8">
@@ -78,19 +80,19 @@
                     </div>
 
 
-        
+
 
                     <div class="mt-6">
                         <label for="feedback" class="block text-gray-700 text-sm font-semibold mb-2">Mensagem</label>
                         <textarea id="feedback" name="feedback" rows="4" required
                             class="w-full p-3 border border-gray-300 resize-none rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                            placeholder="Compartilhe sua experiência " ></textarea>
+                            placeholder="Compartilhe sua experiência "></textarea>
                     </div>
 
                     <div class="mt-6 text-center">
                         <button type="submit"
                             class="px-6 py-3 bg-[#d4a373] text-white text-lg font-semibold rounded-lg hover:bg-[#000000] focus:outline-none focus:ring-2 focus:ring-indigo-500">Enviar
-                            </button>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -98,15 +100,52 @@
 
     </main>
 
+    <!-- button chatt -->
+    <button onclick="toggleChat()"
+        class="fixed bottom-4 right-4 bg-[#d4a373] text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg hover:bg-[#000000] transition">
+        <i class="fas fa-comment-dots text-2xl"></i>
+    </button>
+
+    <!-- chatt box -->
+    <div id="chat-box"
+        class="hidden opacity-0 fixed bottom-20 right-4 w-80 bg-white shadow-lg rounded-lg border border-gray-300 transition-opacity duration-300 flex flex-col">
+        <div class="bg-[#000000] text-white p-3 flex justify-between items-center rounded-t-lg">
+            <h2 class="text-lg font-semibold">Big Bang Burger 🍔</h2>
+            <button onclick="toggleChat()" class="text-white text-xl">&times;</button>
+        </div>
+
+        <div id="chat-body" class="p-3 h-48 overflow-y-auto text-gray-700 flex flex-col"></div>
+
+        <div id="name-form" class="p-3 border-t border-gray-300">
+            <input id="name-input" type="text" placeholder="Digite seu nome" class="w-full p-2 border rounded-lg">
+            <button onclick="setUserName()"
+                class="bg-[#000000] text-white px-3 py-2 rounded-lg text-sm mt-2 ">Confirmar</button>
+        </div>
+
+        <div id="options" class="p-3 border-t border-gray-300 flex flex-wrap gap-2 hidden">
+            <button onclick="sendMessage('cardapio')" class="bg-[#d4a373] text-white px-3 py-2 rounded-lg text-sm">📖
+                Cardápio</button>
+            <button onclick="sendMessage('localizacao')" class="bg-[#d4a373] text-white px-3 py-2 rounded-lg text-sm">📍
+                Localização</button>
+            <button onclick="sendMessage('pagamento')" class="bg-[#d4a373] text-white px-3 py-2 rounded-lg text-sm">💳
+                Pagamento</button>
+            <button onclick="sendMessage('pedido')" class="bg-[#d4a373] text-white px-3 py-2 rounded-lg text-sm">🚚
+                Status do Pedido</button>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
     <footer class="text-white py-8">
         <div class="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
-            <!-- Seção de informações -->
+
             <div class="text-center sm:text-left mb-6 sm:mb-0">
                 <h2 class="text-3xl font-bold text-[#d4a373] mb-2">Big Bang Burger</h2>
                 <p class="text-lg">Sabor e qualidade em cada mordida! </p>
             </div>
 
-            <!-- Seção de Baixar App  -->
+
             <div class="flex items-center justify-center sm:justify-start space-x-4 mt-5 sm:mt-0 w-full sm:w-auto">
                 <p class="text-gray-400">Baixe nosso App:</p>
                 <a href="https://play.google.com/store/apps/details?id=com.example" target="_blank"
@@ -116,7 +155,7 @@
                 </a>
             </div>
 
-            <!-- Seção de redes sociais -->
+
             <div class="flex space-x-6 mt-6 sm:mt-0">
                 <a href="https://www.facebook.com" target="_blank"
                     class="text-gray-400 hover:text-[#d4a373] transition">
@@ -145,7 +184,7 @@
 
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+    <script src="./js/chatboot.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/global.js"></script>
 </body>
